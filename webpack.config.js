@@ -13,7 +13,7 @@ let isDevServer = process.argv[1].indexOf('webpack-dev-server') !== -1;
 isDevServer = !(!isDevelopment || isDevServer);
 
 // Setup for plugins
-const clean = new CleanWebpackPlugin(['js', 'css']);
+const clean = new CleanWebpackPlugin(['js', 'css'], { verbose: false });
 const html = new HtmlWebpackPlugin({ template: './index.html' });
 const extract = new ExtractTextPlugin({
   filename: './css/[name].[hash].css',
@@ -49,7 +49,7 @@ module.exports = {
         },
       },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         use: extract.extract({
           fallback: 'style-loader',
           use: [
@@ -72,6 +72,19 @@ module.exports = {
             },
           ],
         }),
+      },
+      {
+        test: require.resolve('jquery'),
+        use: [
+          { loader: 'expose-loader', options: 'jQuery' },
+          { loader: 'expose-loader', options: '$' },
+        ],
+      },
+      {
+        test: require.resolve('tether'),
+        use: [
+          { loader: 'expose-loader', options: 'Tether' },
+        ],
       },
     ],
   },
