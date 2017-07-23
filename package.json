@@ -1,0 +1,49 @@
+{
+  "name": "TwitchViewer",
+  "version": "0.0.1",
+  "description": "TwitchViewer for FreeCodeCamp.",
+  "main": "index.html",
+  "author": "Anton Zdanov <akumael@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/azdanov/TwitchViewer.git",
+  "scripts": {
+    "dev": "webpack --config webpack.config.js",
+    "watch": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack -p --config webpack.config.js",
+    "test": "mocha --reporter spec --compilers js:babel-core/register || true"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "chai": "^4.1.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^2.29.0",
+    "mocha": "^3.4.2",
+    "node-sass": "^4.5.3",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-loader": "^2.0.6",
+    "postcss-url": "^7.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
