@@ -1,6 +1,6 @@
 {
   "name": "TwitchViewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "TwitchViewer for FreeCodeCamp.",
   "main": "index.html",
   "author": "Anton Zdanov <akumael@gmail.com>",
@@ -47,6 +47,7 @@
     ]
   },
   "dependencies": {
-    "bulma": "^0.4.3"
+    "bulma": "^0.4.3",
+    "core-js": "^2.4.1"
   }
 }

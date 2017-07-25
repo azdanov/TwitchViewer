@@ -1,9 +1,24 @@
 @import "~bulma/sass/utilities/initial-variables";
 
-$primary: #6441a4;
+$primary: #673AB7;
+$success: #4CAF50;
+$danger: #9E9E9E;
+$body-background: #F5F5F5;
 
 @import "~bulma/bulma";
 
+section.section {
+  background-color: $body-background;
+
+  .media-content a.subtitle {
+    display: block;
+  }
+}
+
 .hero-head {
   padding: 15px;
+}
+
+.tag {
+  font-size: 1rem;
 }
